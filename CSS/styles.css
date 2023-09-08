@@ -144,3 +144,38 @@ main {
     }
 
 }
+
+@media (max-width: 350px) {
+    #div1 img {
+        width: 15em;
+        height: 15em;
+    }
+
+    #div1 h1 {
+        font-size: 2em;
+        margin-top: 1em;
+        text-align: center;
+    }
+}
+
+@media (max-width: 250px) {
+    #div {
+        height: 55em;
+        padding: 1em;
+    }
+
+    #div1 {
+        margin-top: -7em;
+        height: 35%;
+    }
+
+    #div2 {
+        height: 40%;
+    }
+
+    #div1 img {
+        width: 10em;
+        height: 10em;
+    }
+
+}
