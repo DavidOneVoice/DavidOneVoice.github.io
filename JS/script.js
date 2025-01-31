@@ -1,19 +1,18 @@
-function updatedTime() {
+function updateTime() {
     let today = new Date();
-    let daylist = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
-    let day = today.getUTCDay();
-    let dayOfWeek = (daylist[day]);
-    let currentDayOfWeek = document.getElementById('dayOfWeek');
-    currentDayOfWeek.innerText = dayOfWeek;
-    let firsthour = today.getHours();
-    let hour = (firsthour < 10) ? `0 ${firsthour}` : firsthour;
-    let firstminute = today.getMinutes();
-    let minute = (firstminute < 10) ? `0 ${firstminute}` : firstminute;
-    let firstsecond = today.getSeconds();
-    let second = (firstsecond < 10) ? `0 ${firstsecond}` : firstsecond;
-    let prepand = (hour >= 12) ? " PM " : " AM ";
-    let currentTime = `${hour} : ${minute} : ${second}  ${prepand}`
-    let time = document.getElementById("time");
-    time.innerText = currentTime;
+    
+    // Get current UTC time
+    let hours = today.getUTCHours().toString().padStart(2, '0');
+    let minutes = today.getUTCMinutes().toString().padStart(2, '0');
+    let seconds = today.getUTCSeconds().toString().padStart(2, '0');
+    
+    // Format as HH:MM:SS UTC
+    let utcTime = `${hours}:${minutes}:${seconds} UTC`;
+
+    // Update the DOM
+    document.getElementById("utcTime").innerText = utcTime;
 }
-setInterval(updatedTime, 1000);
+
+// Update every second
+setInterval(updateTime, 1000);
+updateTime();

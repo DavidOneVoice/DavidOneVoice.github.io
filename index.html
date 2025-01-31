@@ -4,35 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Profile Card">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="https://hngprofiletask.netlify.app/">
+    <meta property="og:description" content="">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site name" content="">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="">
     <script src="https://kit.fontawesome.com/8cbb5859a7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./CSS/styles.css">
-    <title>MY-SLACK || PROFILE-PROJECT</title>
+    <title>Profile Card | HNG Internship</title>
 </head>
 
 <body>
-    <header>
+    <header></header>
 
-    </header>
     <main>
-        <section id="div">
-            <div class="divs" id="div1">
-                <img alt="One Voice" data-testid="slackDisplayImage" src="./IMAGES/8.jpg">
-                <h1 data-testid="slackUserName">One Voice</h1>
+        <section id="profile-card">
+            <div class="profile-section" id="profile-info">
+                <img alt="profile picture" data-testid="profilePicture" src="./IMAGES/8.jpg">
+                <h1 data-testid="fullName">Badru Olumide David</h1>
             </div>
-            <div class="divs" id="div2">
-                <h2 data-testid="myTrack"><i class="fa-solid fa-laptop-code"></i> Front End</h2>
-                <h3 data-testid=“githubURL”><i class="fa-brands fa-github"></i> <a
-                        href="https://github.com/DavidOneVoice/HNG-INTERNSHIP-PROFILE-PROJECT-REPO.git">PROFILE-PROJECT-GITHIB-REPO</a>
+
+            <div class="profile-section" id="profile-details">
+                <h2 data-testid="jobTitle"><i class="fa-solid fa-laptop-code"></i> Frontend Developer</h2>
+
+                <p data-testid="shortBio">
+                    I am a passionate frontend developer with a strong eye for design and user experience. 
+                    I specialize in building responsive web applications using modern technologies.
+                </p>
+
+                <h3 data-testid="currentLocation"><i class="fa-solid fa-location-dot"></i> Lagos, Nigeria</h3>
+                
+                <h3 data-testid="emailAddress"><i class="fa-solid fa-envelope"></i> 
+                    <a id="emaillink" href="mailto:badrudavid2014@gmail.com">badrudavid2014@gmail.com</a>
                 </h3>
-                <h3 data-testid="currentDayOfTheWeek"><i class="fa-regular fa-calendar-days"></i><span
-                        id="dayOfWeek"></span></h3>
-                <h3 data-testid="currentUTCTime"><i class="fa-solid fa-clock"></i><span id="time"></span></h3>
+
+                <div data-testid="socialLinks" class="social-links">
+                    <a href="https://www.linkedin.com/in/badrudavid" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/DavidOneVoice" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://twitter.com/DavidOneVoice" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+
+                <h3 data-testid="currentTimeUTC">
+                    <i class="fa-solid fa-clock"></i> <span id="utcTime"></span>
+                </h3>
             </div>
         </section>
     </main>
-    <footer>
 
-    </footer>
+    <footer></footer>
     <script src="./JS/script.js"></script>
 </body>
 
